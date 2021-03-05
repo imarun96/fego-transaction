@@ -35,7 +35,7 @@ public class TransactionController {
         this.financialCalendarService = financialCalendarService;
     }
 
-/*    @Transactional
+    @Transactional
     @PostMapping
     @ApiOperation(value = "Inserts a list of transactions of an user")
     public SuccessResponse<SuccessResponseDto> saveTransaction(
@@ -48,7 +48,15 @@ public class TransactionController {
     @ApiOperation(value = "Returns the Transactions made by an User on a particular date")
     public SuccessResponse<DailyTransactionResponseDto> getTransaction(@RequestParam(name = "date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date) {
         return new SuccessResponse<>(transactionService.getTransactionOnDate(date), HttpStatus.OK);
-    }*/
+    }
+
+    public void arun(){
+
+    }
+
+    public void balaji(){
+        
+    }
 
     @Transactional
     @GetMapping("/monthly-overview")
