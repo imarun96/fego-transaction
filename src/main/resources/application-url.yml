@@ -1,0 +1,17 @@
+application:
+  aws:
+    access_key_id: AKIASL5PWAJQRKUMN5WC
+    secret_access_key: 3V42yv1adSpqgW6Q9lCZrlK1dQmhmPlax9barIQ9
+    region: us-east-2
+    bucketName: sample-bucket-imarun
+    bucket-base-URL: https://sample-bucket-imarun.s3.us-east-2.amazonaws.com/
+  integration:
+    baseURL: http://localhost:7080/v1/
+    approveConsentRequest: consent/approve
+    rejectConsentRequest: consent/reject
+    transaction-daily-sync: consent/requestDaily
+  user:
+    baseURL: http://localhost:8080/v1/
+    saving-preference: user/saving-preference
+    user: user
+  categorization-partner: Finbit

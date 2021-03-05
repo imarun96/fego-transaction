@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/transaction?serverTimeZone=UTC&characterEncoding=UTF-8
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      javax:
+        persistence:
+          sharedCache:
+            mode: ENABLE_SELECTIVE
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        cache:
+          use_second_level_cache: true
+        region:
+          factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
+  application:
+    name: fego-transaction-service
+flyway:
+  url: jdbc:postgresql://localhost:5432/transaction
+  schemas: PUBLIC
+  user: postgres
+  password: root1
+server:
+  port: 8081
+fego:
+  paging:
+    limit:
+      maximum: 10
